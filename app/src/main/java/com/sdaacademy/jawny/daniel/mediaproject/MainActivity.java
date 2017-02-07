@@ -13,12 +13,9 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 
     public void animate(final View view) {
-
         Animation animationFirst = AnimationUtils.loadAnimation(this, R.anim.spinn_first);
         final Animation animationSecond = AnimationUtils.loadAnimation(this, R.anim.spinn_second);
         animationFirst.setAnimationListener(new Animation.AnimationListener() {
@@ -40,21 +37,6 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCom
             }
         });
         view.startAnimation(animationFirst);
-
-        switch (view.getId()) {
-            case R.id.imageView:
-                break;
-            case R.id.imageView2:
-                break;
-            case R.id.imageView3:
-                break;
-            case R.id.imageView4:
-                break;
-            case R.id.imageView5:
-                break;
-            case R.id.imageView6:
-                break;
-        }
     }
 
     @Override
