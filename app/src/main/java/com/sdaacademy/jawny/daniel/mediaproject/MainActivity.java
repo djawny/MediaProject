@@ -7,14 +7,19 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity implements MediaPlayer.OnCompletionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
+    @OnClick({R.id.imageView1, R.id.imageView2, R.id.imageView3, R.id.imageView4, R.id.imageView5, R.id.imageView6})
     public void animate(final View view) {
         Animation animationFirst = AnimationUtils.loadAnimation(this, R.anim.spinn_first);
         final Animation animationSecond = AnimationUtils.loadAnimation(this, R.anim.spinn_second);
